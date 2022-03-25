@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'tailWindSample';
+  isCategoryMenuShow="hidden" ;
+  category=["Woman", "Man","Kid","accessory" ]
+
+  categoryMenuClick(){
+    if( this.isCategoryMenuShow =="block")
+    this.isCategoryMenuShow = "hidden";
+    else if( this.isCategoryMenuShow =="hidden")
+    this.isCategoryMenuShow = "block";
+  }
 }
