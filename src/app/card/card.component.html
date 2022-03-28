@@ -1,0 +1,13 @@
+<div class=" h-100 w-80 bg-gray-100 border-2  border-blue-200 hover:drop-shadow-xl rounded-xl">
+   <div id="img" class ="p-3 border-b-blue-200 border-b-2">
+        <img class ="object-contain h-72 w-80"  src="'../../../../assets/image/clothes-{{data.name}}.jpg">
+   </div> 
+   <div id="sizeBar" class="flex justify-evenly pl-4 pr-4 h-10 align-middle pt-2 ">
+        <button *ngFor="let size of data.size" class=" w-7 h-7 bg-slate-300 from-neutral-100 rounded-full hover:bg-blue-300">{{size}}</button>  
+   </div>
+   <div id="btnMenu" class="flex pl-4 pr-4 h-10 justify-evenly item-center pt-3">
+        <button class="h-7 w-12 bg-slate-300 from-neutral-100 rounded-md hover:bg-blue-300">Buy</button>
+        <button class="h-7 w-28 bg-slate-300 from-neutral-100 rounded-md hover:bg-blue-300">Add Cart</button>
+        
+   </div>
+</div>
