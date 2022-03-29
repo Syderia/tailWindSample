@@ -1,4 +1,4 @@
-<div class=" h-100 w-80 bg-gray-100 border-2  border-blue-200 hover:drop-shadow-xl rounded-xl">
+<div class=" h-96(answer1) w-80 bg-gray-100 border-2  border-blue-200 hover:drop-shadow-xl rounded-xl">
      <div id="img" class ="p-3 border-b-blue-200 border-b-2">
           <img class ="object-contain h-72 w-80"  src="'../../../../assets/image/clothes-{{data.name}}.jpg">
      </div> 
@@ -10,3 +10,13 @@
           <button class="h-7 w-28 bg-slate-300 from-neutral-100 rounded-full font-mono hover:bg-blue-300">Add Cart</button>
      </div>
   </div>
+
+  <!--
+     answer1: 到style.css加上
+     /* @layer utilities {
+               .h-100 {
+               height: 26rem;
+          }
+     } */
+     h-96 => h-100
+  -->

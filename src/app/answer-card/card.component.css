@@ -1,0 +1,5 @@
+
+    .btn{
+        @apply bg-slate-300 from-neutral-100 rounded-full font-mono hover:bg-blue-300
+    }
+
