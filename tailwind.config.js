@@ -5,9 +5,6 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-  purge: {
-    enabled: true,
-    content: ["./src/**/*.html", "./src/**/*.scss"],
-  },
+  content: ["./src/**/*.html", "./src/**/*.scss"],
   darkMode: false, 
 }
