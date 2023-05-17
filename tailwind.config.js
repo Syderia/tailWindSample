@@ -5,6 +5,5 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-  content: ["./src/**/*.html", "./src/**/*.scss"],
-  darkMode: false, 
+  content: ["./src/**/*.html", "./src/**/*.scss"], 
 }
