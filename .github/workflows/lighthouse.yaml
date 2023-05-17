@@ -3,10 +3,10 @@ name: Lighthouse CI
 on:
   push:
     branches:
-      - master  # 更改為你的主分支名稱
+      - tailwindcss  # 更改為你的主分支名稱
   pull_request:
     branches:
-      - master  # 更改為你的主分支名稱
+      - tailwindcss  # 更改為你的主分支名稱
 
 jobs:
   lighthouse:
