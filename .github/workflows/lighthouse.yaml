@@ -9,26 +9,13 @@ on:
       - tailwindcss  # 更改為你的主分支名稱
 
 jobs:
-  lighthouse:
+  lighthouseci:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
-          node-version: 14
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Run Lighthouse
-        run: npm run lighthouse -- --chrome-flags="--headless" --output=json --output-path=report.json
-
-      - name: Upload report
-        uses: actions/upload-artifact@v2
-        with:
-          name: Lighthouse Report
-          path: report.json
+          node-version: 16
+      - run: npm install && npm install -g @lhci/cli@0.11.x
+      - run: npm run build
+      - run: lhci autorun
