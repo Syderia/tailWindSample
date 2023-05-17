@@ -1,0 +1,34 @@
+name: Lighthouse CI
+
+on:
+  push:
+    branches:
+      - master  # 更改為你的主分支名稱
+  pull_request:
+    branches:
+      - master  # 更改為你的主分支名稱
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Lighthouse
+        run: npm run lighthouse -- --chrome-flags="--headless" --output=json --output-path=report.json
+
+      - name: Upload report
+        uses: actions/upload-artifact@v2
+        with:
+          name: Lighthouse Report
+          path: report.json
