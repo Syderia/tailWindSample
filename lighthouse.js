@@ -1,9 +1,20 @@
-module.exports = {
+// module.exports = {
+//     ci: {
+//       collect: {
+//         url: ['http://localhost:4200'],
+//         staticDistDir: './dist/tailWindSample',
+//       },
+//       // 其他設定...
+//     },
+//   };
+
+  module.exports = {
     ci: {
       collect: {
-        url: ['http://localhost:4200'],
-        staticDistDir: './dist/tailwindsample',
+        staticDistDir: './',
       },
-      // 其他設定...
+      upload: {
+        target: 'temporary-public-storage',
+      },
     },
   };
