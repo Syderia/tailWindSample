@@ -12,10 +12,15 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16.x
-      - name: npm install, build
+      - name: install
+        run: npm install
+      - name: build
         run: |
-          npm install
           npm run build
+          ls build
+          ls build/static
+          ls build/static/js
+          cat build/index.html
       - name: run Lighthouse CI
         run: |
           npm install -g @lhci/cli@0.11.x
