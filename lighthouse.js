@@ -1,7 +1,7 @@
   module.exports = {
   ci: {
     collect: {
-      staticDistDir: './dist/tailWindSample',
+      staticDistDir: './',
     },
     upload: {
       target: 'temporary-public-storage',
